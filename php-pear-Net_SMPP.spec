@@ -8,13 +8,13 @@ Summary:	%{_pearname} - SMPP v3.4 protocol implementation
 Summary(pl):	%{_pearname} - implementacja protoko³u SMPP v3.4
 Name:		php-pear-%{_pearname}
 Version:	0.4.3
-Release:	1
+Release:	1.1
 License:	PHP 3.0
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	0ba4c28d961f753489f8463374d65ed3
 URL:		http://pear.php.net/package/Net_SMPP/
-BuildRequires:	rpm-php-pearprov >= 4.0.2-98
+BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -34,23 +34,20 @@ bezprzewodowym do wysy³ania i odbierania wiadomo¶ci SMS.
 Ta klasa ma w PEAR status: %{_status}.
 
 %prep
-%setup -q -c
+%pear_package_setup
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/{Command,Vendor/mBlox}
-
-install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-install %{_pearname}-%{version}/%{_subclass}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
-install %{_pearname}-%{version}/%{_subclass}/Command/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/Command
-install %{_pearname}-%{version}/%{_subclass}/Vendor/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/Vendor
-install %{_pearname}-%{version}/%{_subclass}/Vendor/mBlox/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/Vendor/mBlox
+install -d $RPM_BUILD_ROOT%{php_pear_dir}
+%pear_package_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}/docs/*
+%doc install.log
+%doc docs/%{_pearname}/docs/*
+%{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}
