@@ -7,12 +7,12 @@
 Summary:	%{_pearname} - SMPP v3.4 protocol implementation
 Summary(pl):	%{_pearname} - implementacja protoko³u SMPP v3.4
 Name:		php-pear-%{_pearname}
-Version:	0.4.3
-Release:	1.1
+Version:	0.4.4
+Release:	1
 License:	PHP 3.0
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	0ba4c28d961f753489f8463374d65ed3
+# Source0-md5:	6f43b069baeed9fb4b2bd5f9a04ea031
 URL:		http://pear.php.net/package/Net_SMPP/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
