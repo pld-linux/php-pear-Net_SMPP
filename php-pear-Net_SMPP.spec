@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - SMPP v3.4 protocol implementation
-Summary(pl):	%{_pearname} - implementacja protoko≥u SMPP v3.4
+Summary(pl.UTF-8):   %{_pearname} - implementacja protoko≈Çu SMPP v3.4
 Name:		php-pear-%{_pearname}
 Version:	0.4.4
 Release:	1
@@ -30,10 +30,10 @@ to send and recieve SMS messages.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Net_SMPP to implementacja protoko≥u SMPP (Short Message Peer-to-Peer)
-w wersji 3.4. SMPP to otwarty protokÛ≥ wykorzystywany w przemy∂le
-bezprzewodowym do wysy≥ania i odbierania wiadomo∂ci SMS.
+%description -l pl.UTF-8
+Net_SMPP to implementacja protoko≈Çu SMPP (Short Message Peer-to-Peer)
+w wersji 3.4. SMPP to otwarty protok√≥≈Ç wykorzystywany w przemy≈õle
+bezprzewodowym do wysy≈Çania i odbierania wiadomo≈õci SMS.
 
 Ta klasa ma w PEAR status: %{_status}.
 
