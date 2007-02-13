@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - SMPP v3.4 protocol implementation
-Summary(pl.UTF-8):   %{_pearname} - implementacja protokołu SMPP v3.4
+Summary(pl.UTF-8):	%{_pearname} - implementacja protokołu SMPP v3.4
 Name:		php-pear-%{_pearname}
 Version:	0.4.4
 Release:	1
