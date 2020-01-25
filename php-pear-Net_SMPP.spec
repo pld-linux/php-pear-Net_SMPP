@@ -1,6 +1,5 @@
 %define		_status		beta
 %define		_pearname	Net_SMPP
-%include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - SMPP v3.4 protocol implementation
 Summary(pl.UTF-8):	%{_pearname} - implementacja protokołu SMPP v3.4
 Name:		php-pear-%{_pearname}
